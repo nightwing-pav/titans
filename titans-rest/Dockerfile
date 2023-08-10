@@ -6,7 +6,7 @@ COPY . .
 RUN mvn clean package
 
 #
-# Package stage
+# Package stage 
 #
 FROM openjdk:20-ea-b24
 COPY --from=build /target/titans-rest-0.0.1-SNAPSHOT.jar titans-rest.jar
